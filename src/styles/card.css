@@ -1,0 +1,42 @@
+.mainDiv{
+    width: 20em;
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImage{
+    
+}
+
+.cardDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: coral;
+    font-size: 20px;
+}
+
+.cardDescription{
+    border: 1px solid gray;
+    text-align: justify;
+    padding: 5px;
+    overflow: hidden;
+    height: 100px;
+}
+
+.cardReadMore{
+    color: blue;
+    position: relative;
+    margin: 0px;
+    text-align: left;
+}
+
+.cardRenderer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
