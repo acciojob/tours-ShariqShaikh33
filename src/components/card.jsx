@@ -8,7 +8,7 @@ const Card=(props)=>{
     const expand=(id,)=>{
         const element = document.getElementById(id);
         if(!isopen){
-            document.getElementById("see-more-"+`${props.id}`).innerHTML="See less";
+            document.getElementById("see-more-"+`${props.id}`).innerHTML="Show less";
             element.innerHTML = `${props.info}`;
             element.style.height="100%";
             isopen=true;
