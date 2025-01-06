@@ -12,6 +12,10 @@
     
 }
 
+.cardinfo{
+    height: 100px;
+}
+
 .cardDetails{
     display: flex;
     justify-content: space-between;

@@ -8,10 +8,14 @@ const Card=(props)=>{
     const expand=(id,)=>{
         const element = document.getElementById(id);
         if(!isopen){
+            document.getElementById(props.id+"btn").innerHTML="See less";
+            element.innerHTML = `${props.info}`;
             element.style.height="100%";
             isopen=true;
         }
         else if(isopen){
+            document.getElementById(props.id+"btn").innerHTML="Show more";
+            element.innerHTML = `${props.info.substring(0,200)}`
             element.style.height="100px";
             isopen=false;
         }
@@ -21,6 +25,7 @@ const Card=(props)=>{
         document.getElementById(id).remove();
     }
 
+
     return(
         <div id={props.id+"main"} className="mainDiv">
             <img className="cardImage" src={props.image}></img>
@@ -29,10 +34,10 @@ const Card=(props)=>{
                 <p className="cardPrice">{props.price}</p>
             </div>
             <div id={props.id+"info"} className="cardDescription">
-                <p id={"tour-item-para-"+props.id} className="cardinfo">{props.info}</p>
+                <p id={"tour-item-para-"+props.id} className="cardinfo">   {props.info.substring(0,200)} </p>
                 
             </div>
-            <button className="cardReadMore" id={props.id+"btn"} onClick={()=>expand(props.id+"info")}>Read more</button>
+            <button className="cardReadMore" id={props.id+"btn"} onClick={()=>expand(props.id+"info")}>Show more</button>
             <button id={"delete-btn-"+props.id} onClick={() => deletetour(`${props.id}`+"main")}>Delete</button>
         </div>
     )
