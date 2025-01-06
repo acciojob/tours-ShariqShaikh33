@@ -33,7 +33,7 @@ const Card=(props)=>{
                 
             </div>
             <button className="cardReadMore" id={props.id+"btn"} onClick={()=>expand(props.id+"info")}>Read more</button>
-            <button onClick={() => deletetour(`${props.id}`+"main")}>Delete</button>
+            <button id={"delete-btn-"+props.id} onClick={() => deletetour(`${props.id}`+"main")}>Delete</button>
         </div>
     )
 }
