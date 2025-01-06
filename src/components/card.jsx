@@ -14,7 +14,7 @@ const Card=(props)=>{
             isopen=true;
         }
         else if(isopen){
-            document.getElementById(props.id+"btn").innerHTML="Show more";
+            document.getElementById(props.id+"btn").innerHTML="See more";
             element.innerHTML = `${props.info.substring(0,200)}`
             element.style.height="100px";
             isopen=false;
@@ -37,7 +37,7 @@ const Card=(props)=>{
                 <p id={"tour-item-para-"+props.id} className="cardinfo">   {props.info.substring(0,200)} </p>
                 
             </div>
-            <button className="cardReadMore" id={"see-more-"+`${props.id}`} onClick={()=>expand(props.id+"info")}>Show more</button>
+            <button className="cardReadMore" id={"see-more-"+`${props.id}`} onClick={()=>expand(props.id+"info")}>See more</button>
             <button id={"delete-btn-"+props.id} onClick={() => deletetour(`${props.id}`+"main")}>Delete</button>
         </div>
     )
