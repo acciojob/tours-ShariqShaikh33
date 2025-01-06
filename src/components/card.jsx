@@ -8,13 +8,13 @@ const Card=(props)=>{
     const expand=(id,)=>{
         const element = document.getElementById(id);
         if(!isopen){
-            document.getElementById(props.id+"btn").innerHTML="See less";
+            document.getElementById("see-more-"+`${props.id}`).innerHTML="See less";
             element.innerHTML = `${props.info}`;
             element.style.height="100%";
             isopen=true;
         }
         else if(isopen){
-            document.getElementById(props.id+"btn").innerHTML="See more";
+            document.getElementById("see-more-"+`${props.id}`).innerHTML="See more";
             element.innerHTML = `${props.info.substring(0,200)}`
             element.style.height="100px";
             isopen=false;
