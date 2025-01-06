@@ -29,7 +29,7 @@ const Card=(props)=>{
                 <p className="cardPrice">{props.price}</p>
             </div>
             <div id={props.id+"info"} className="cardDescription">
-                <p className="cardinfo">{props.info}</p>
+                <p id={"tour-item-para-"+props.id} className="cardinfo">{props.info}</p>
                 
             </div>
             <button className="cardReadMore" id={props.id+"btn"} onClick={()=>expand(props.id+"info")}>Read more</button>
